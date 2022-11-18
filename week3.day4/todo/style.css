@@ -1,0 +1,23 @@
+* {
+  padding: 5;
+  margin: 10px;
+}
+
+header {
+  background-color: black;
+  color: gray;
+  text-align: left;
+  padding-left: 5rem;
+}
+
+content {
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  margin-top: 2em;
+}
+
+li {
+  border: 1px solid gray;
+  
+}
