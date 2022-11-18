@@ -1,0 +1,7 @@
+// SolveMeFirst
+입력 : 1 2
+출력 : 3
+
+// GradingStudents
+입력 : 73 67 38 33
+출력 : 75 67 40 33
