@@ -1,23 +1,68 @@
 * {
-  padding: 5;
-  margin: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
 }
 
 header {
   background-color: black;
-  color: gray;
-  text-align: left;
-  padding-left: 5rem;
+  color: grey;
+  height: 70px;
+  line-height: 70px;
+  padding-left: 50px;
 }
 
-content {
-  background-color: #fff;
-  color: black;
+main {
+  width: 720px;
+  margin: auto;
+}
+
+#task-form {
+  margin-bottom: 30px;
+}
+
+#task-name {
+  width: 400px;
+  height: 30px;
+  margin-left: 100px;
+  margin-right: 20px;
+}
+
+#add-button {
+  all: initial;
+  background-color: #3279b7;
+  color: white;
+  height: 30px;
+  width: 50px;
   text-align: center;
-  margin-top: 2em;
+  border-radius: 5%;
+}
+
+ul {
+  all: initial;
 }
 
 li {
-  border: 1px solid gray;
-  
+  all: initial;
+  margin: 0 30px;
+  display: block;
+  border: 1px solid #ccc;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+li > input {
+  margin: 0 20px;
+}
+
+li > span {
+  padding: 0 10px;
+}
+
+li > img {
+  float: right;
+  margin: 0 30px;
+  width: 16px;
 }

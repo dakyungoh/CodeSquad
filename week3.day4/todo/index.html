@@ -1,36 +1,47 @@
+<!-- To Run This App, run `http-server -c-1` on the terminal -->
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>웹 TODO 개발</title>
-  <link rel="favicon" href="./favicon.ico">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>ToDo List</h1>
-  </header>
-  <content>
-    <h2>ToDo List</h2>
-    <form action="" id="task-form">
-      <input type="text" id="task-name" name="task-name" placeholder="New Task">
-      <input type="button" id="add-button" value="Add">
-    </form>
-    <ul id="my-task-list">
-      <li>
-        <input type="checkbox" onclick="onClickCheckbox(this)">
-        <span>First item</span>
-        <input type="button" value="delete" onclick="onClickDelete(this)">
-      </li>
-      <li>
-        <input type="checkbox" onclick="onClickCheckbox(this)">
-        <span>Second item</span>
-        <input type="button" value="delete" onclick="onClickDelete(this)">
-      </li>
-    </ul>
-  </content>
-  <script src="index.js">
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹 TODO 개발</title>
+    <link rel="favicon" href="./favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ToDo List</h1>
+    </header>
+    <main>
+      <h2>ToDo List</h2>
+      <form id="task-form" onsubmit="return false;">
+        <input
+          type="text"
+          id="task-name"
+          name="task-name"
+          placeholder="New Task"
+          onkeyup="onKeyUp()"
+        />
+        <input
+          type="button"
+          id="add-button"
+          value="Add"
+          onClick="addTaskItem()"
+        />
+      </form>
+      <ul id="my-task-list">
+        <li>
+          <input type="checkbox" onclick="onClickCheckbox(this)" />
+          <span>First item</span>
+          <img src="trash-bin.png" onclick="onClickDelete(this)" />
+        </li>
+        <li>
+          <input type="checkbox" onclick="onClickCheckbox(this)" />
+          <span>Second item</span>
+          <img src="trash-bin.png" onclick="onClickDelete(this)" />
+        </li>
+      </ul>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>

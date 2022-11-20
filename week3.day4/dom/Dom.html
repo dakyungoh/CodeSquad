@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <input type="button" value="눌러보세요" onclick="onClickButton1(this)" />
+    <input type="button" value="눌러보세요" onclick="onClickButton2()" />
+    <div id="clicked-result"></div>
+    <div id="clock">현재시각</div>
+  </body>
+  <script>
+    function onClickButton1(buttonElem) {
+      buttonElem.value = "누르셨군요!";
+    }
+
+    function onClickButton2() {
+      document.querySelector("#clicked-result").innerText = "누르셨군요!";
+    }
+
+    const updateTime = setInterval(function () {
+      const d = new Date();
+      document.querySelector("#clock").innerText = d.toLocaleString();
+    }, 1000);
+  </script>
+</html>
